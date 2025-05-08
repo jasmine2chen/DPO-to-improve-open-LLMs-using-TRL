@@ -1,4 +1,4 @@
-# DOP with & Hugging Face TRL
+# DOP with Hugging Face TRL
 
 ### Project Overview
 This project demonstrates how to improve open-source LLMs using Direct Preference Optimization (DPO) with Hugging Face's TRL, Transformers, and datasets libraries.
@@ -31,6 +31,13 @@ Research shows DPO performs best when applied after Supervised Fine-Tuning (SFT)
 Base Model: dolphin-2.1-mistral-7b
 
 A Mistral-7B model fine-tuned with SFT and ChatML formatting.
+
+### References
+Original DPO Paper: https://arxiv.org/abs/2305.18290
+
+Hugging Face TRL: https://github.com/huggingface/trl
+
+Dolphin-2.1-Mistral-7B: https://huggingface.co/cognitivecomputations/dolphin-2.1-mistral-7b
 
 
 
