@@ -1,18 +1,36 @@
-DOP with & Hugging Face TRL
-I used DPO to improve open LLMs using Hugging Face TRL, Transformers & datasets.
+# DOP with & Hugging Face TRL
 
-Research and empirical results show that DPO works best when applied to a model that has already undergone SFT, reasons are listed as follows:
+### Project Overview
+This project demonstrates how to improve open-source LLMs using Direct Preference Optimization (DPO) with Hugging Face's TRL, Transformers, and datasets libraries.
 
-1. SFT first teaches the model the task (e.g., generating coherent responses), while DPO refines quality using human preferences.
+### Key highlights:
 
-2. Without SFT, DPO struggles with noisy/off-task outputs, leading to unstable training.
+- Implementation of the SFT → DPO pipeline for aligning LLMs with human preferences.
 
-3. Empirical results show SFT → DPO is more efficient and effective than DPO alone.
+- Uses cognitivecomputations/dolphin-2.1-mistral-7b (a fine-tuned Mistral-7B with ChatML) as the base model.
 
-cognitivecomputations/dolphin-2.1-mistral-7b is used as a fine-tuned Mistral 7B with ChatML template. Code logics can be broken down as follows:
+- Includes dataset preparation, DPO training with DPOTrainer, and evaluation.
 
+### Why SFT Before DPO?
+Research shows DPO performs best when applied after Supervised Fine-Tuning (SFT):
+
+- SFT teaches task fundamentals (e.g., generating coherent responses).
+
+- DPO refines outputs using preference data (e.g., chosen vs. rejected responses).
+
+- Skipping SFT leads to unstable training and poor convergence.
+
+### Workflow
 - Setup development environment
 - Create and prepare the preference dataset
 - Align LLM with TRL and the DPOTrainer
 - Test LLM (vibe-check)
 - Evaluate open LLMs on MT-Bench
+
+### Model Used
+Base Model: dolphin-2.1-mistral-7b
+
+A Mistral-7B model fine-tuned with SFT and ChatML formatting.
+
+
+
