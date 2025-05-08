@@ -1,4 +1,4 @@
-# DOP with Hugging Face TRL
+# Direct Preference Optimization with Hugging Face TRL
 
 ### Project Overview
 This project demonstrates how to improve open-source LLMs using Direct Preference Optimization (DPO) with Hugging Face's TRL, Transformers, and datasets libraries.
